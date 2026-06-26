@@ -119,7 +119,7 @@ python src/02_build_db.py       # -> nba.duckdb (tables: box, odds, game)
 - [x] **Phase 1** - SQL feature engineering (rolling form + rest via window functions, Elo); `model_data` table built. Elo predicts wins (34%->78%) but ATS cover stays ~50% across all strength buckets - the thesis, visible pre-modeling.
 - [x] **Phase 2** - modeling (logistic / linear / XGBoost) with time-aware split (train 2015-2024, test 2024-26). See results below.
 - [x] **Phase 3** - error analysis: variance decomposition + segment ATS (see below)
-- [ ] **Phase 4** - Power BI dashboard + write-up
+- [~] **Phase 4** - Power BI dashboard: data exported + build guide written ([`powerbi/BUILD_GUIDE.md`](powerbi/BUILD_GUIDE.md)); `.pbix` to be assembled in Power BI Desktop
 
 ## Report sections (final deliverable)
 

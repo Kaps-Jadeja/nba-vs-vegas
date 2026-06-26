@@ -1,0 +1,4 @@
+model,accuracy,roc_auc,brier
+Logistic,0.679,0.7323,0.2079
+XGBoost,0.6523,0.7145,0.2137
+Vegas line,0.6982,0.7639,0.1963

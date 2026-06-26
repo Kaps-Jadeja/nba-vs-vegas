@@ -1,0 +1,13 @@
+seg_group,segment,games,ats_hit_pct,roi_pct
+Spread size,Pick'em (0-3),450,49.6,-5.4
+Spread size,Small (3-7),743,49.0,-6.5
+Spread size,Mid (7-11),514,50.4,-3.8
+Spread size,Big (11+),427,48.0,-8.3
+Favorite,Away favored,870,47.5,-9.4
+Favorite,Home favored,1264,50.5,-3.6
+Season stage,Early,320,51.9,-1.0
+Season stage,Mid,739,50.2,-4.2
+Season stage,Late,1075,47.8,-8.7
+Back-to-back,Away on B2B,276,47.5,-9.4
+Back-to-back,Home on B2B,255,50.2,-4.2
+Back-to-back,Neither/Both,1603,49.4,-5.7

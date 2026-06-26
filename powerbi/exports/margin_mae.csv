@@ -1,0 +1,4 @@
+model,mae
+Linear,11.322
+XGBoost,11.511
+Vegas line,10.787
