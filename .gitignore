@@ -1,0 +1,19 @@
+# Credentials - NEVER commit
+kaggle.json
+.kaggle/
+*.env
+
+# Data (downloaded via scripts; see data/README.md)
+data/
+*.duckdb
+*.duckdb.wal
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Power BI temp
+*.pbix.tmp

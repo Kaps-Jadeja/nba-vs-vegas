@@ -1,0 +1,6 @@
+strategy,bets,ats_hit_pct,roi_pct
+linear_vs_spread,2134,49.16,-6.16
+xgboost_vs_spread,2134,49.25,-5.98
+elo_favorite,2134,50.89,-2.85
+always_home,2134,50.47,-3.65
+xgboost_edge>=3pts (n=1064),1064,49.06,-6.34

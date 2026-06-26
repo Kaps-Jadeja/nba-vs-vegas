@@ -1,0 +1,11 @@
+nba_api>=1.11
+duckdb>=1.5
+pandas>=2.0
+numpy>=1.26
+scikit-learn>=1.4
+xgboost>=2.0
+matplotlib>=3.8
+seaborn>=0.13
+statsmodels>=0.14
+kaggle>=1.6
+jupyter

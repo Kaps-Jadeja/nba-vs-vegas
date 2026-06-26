@@ -1,0 +1,7 @@
+model,target,n,accuracy,roc_auc,brier,log_loss,mae
+logistic,home_win,2134.0,0.679,0.7323,0.2079,0.6031,
+xgboost,home_win,2134.0,0.6523,0.7145,0.2137,0.6157,
+vegas_spread,home_win,2134.0,0.6982,0.7639,0.1963,0.5757,
+linear,home_margin,,,,,,11.322
+xgboost,home_margin,,,,,,11.511
+vegas_line,home_margin,,,,,,10.787
