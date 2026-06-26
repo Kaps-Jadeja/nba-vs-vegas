@@ -51,6 +51,27 @@ the Vegas line beats them on every accuracy metric and **no betting strategy cle
 the vig** - selectivity makes it worse, not better. The remaining edge is too small
 and too noisy to overcome transaction costs: the market is efficient.
 
+## Phase 3 - why the models fail (hidden variance)
+
+**How much of a game is even predictable?** (test seasons)
+
+| Predictor | Variance explained | Residual SD |
+| --- | --- | --- |
+| Vegas closing line | 28.1% | 13.9 pts |
+| Our XGBoost | 19.3% | 14.7 pts |
+
+Actual home-margin SD is 16.4 pts. **Even the market explains less than a third of
+game-to-game variance** - it leaves a ~14-point per-game noise floor. That floor is
+the *hidden variance*: injuries, rotations, foul trouble, and shooting luck that no
+pre-game model can see. A better model cannot remove it.
+
+**Is any segment beatable?** No. ATS hit rate stays ~47-52% (below the 52.4%
+breakeven) across spread size, favorites/underdogs, back-to-backs, season stage, and
+totals. Early-season games are the *least* inefficient slice (51.9% ATS, ROI -0.9%) -
+suggestive but still not profitable. Error grows with spread size: big-favorite games
+are the noisiest (more garbage time and resting starters). Full breakdown in
+[`reports/phase3_findings.md`](reports/phase3_findings.md).
+
 ## Tech stack
 
 - **Python** (pandas, NumPy, scikit-learn, XGBoost, statsmodels)
@@ -97,7 +118,7 @@ python src/02_build_db.py       # -> nba.duckdb (tables: box, odds, game)
 - [x] **Phase 0** - data acquisition + DuckDB base table (`game`), 99.98% odds match
 - [x] **Phase 1** - SQL feature engineering (rolling form + rest via window functions, Elo); `model_data` table built. Elo predicts wins (34%->78%) but ATS cover stays ~50% across all strength buckets - the thesis, visible pre-modeling.
 - [x] **Phase 2** - modeling (logistic / linear / XGBoost) with time-aware split (train 2015-2024, test 2024-26). See results below.
-- [ ] **Phase 3** - evaluation vs Vegas (ATS, Brier, calibration, profit sim)
+- [x] **Phase 3** - error analysis: variance decomposition + segment ATS (see below)
 - [ ] **Phase 4** - Power BI dashboard + write-up
 
 ## Report sections (final deliverable)
