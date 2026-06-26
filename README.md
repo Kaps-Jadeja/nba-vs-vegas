@@ -24,6 +24,15 @@ Across 13,199 regular-season games (2015-16 to 2025-26):
 | Over % | 50.4% | Totals are efficiently priced |
 | Avg spread vs avg margin | -2.25 vs +2.16 | The line is nearly unbiased |
 
+## Dashboard (Power BI)
+
+![NBA vs Vegas dashboard](powerbi/dashboard.png)
+
+Built from `powerbi/exports/` (see [build guide](powerbi/BUILD_GUIDE.md)). At a
+glance: the model predicts winners well (67.9%) but Vegas is better (69.8%), the
+ATS hit rate sits below the 52.4% breakeven across every segment, and a flat-stake
+bet on the model loses money over the two test seasons.
+
 ## Results (test seasons 2024-25 & 2025-26, 2,134 games)
 
 **Predicting the winner** - models are good, but the market is better:
@@ -119,7 +128,7 @@ python src/02_build_db.py       # -> nba.duckdb (tables: box, odds, game)
 - [x] **Phase 1** - SQL feature engineering (rolling form + rest via window functions, Elo); `model_data` table built. Elo predicts wins (34%->78%) but ATS cover stays ~50% across all strength buckets - the thesis, visible pre-modeling.
 - [x] **Phase 2** - modeling (logistic / linear / XGBoost) with time-aware split (train 2015-2024, test 2024-26). See results below.
 - [x] **Phase 3** - error analysis: variance decomposition + segment ATS (see below)
-- [~] **Phase 4** - Power BI dashboard: data exported + build guide written ([`powerbi/BUILD_GUIDE.md`](powerbi/BUILD_GUIDE.md)); `.pbix` to be assembled in Power BI Desktop
+- [x] **Phase 4** - Power BI dashboard ([`.pbix`](powerbi/NBA_Vegas_Dashboard.pbix), [build guide](powerbi/BUILD_GUIDE.md))
 
 ## Report sections (final deliverable)
 
