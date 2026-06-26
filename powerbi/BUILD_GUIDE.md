@@ -105,13 +105,4 @@ CALCULATE(
 ## 5. Add a screenshot to the repo (nice touch)
 With the dashboard open, Windows **Snipping Tool** (Win+Shift+S) -> capture the
 page -> save as `powerbi/dashboard.png`. Then it can be embedded in the README so
-recruiters see it without opening Power BI.
-
----
-
-## Interview talking points
-- "I modeled the data in SQL/DuckDB, then built a Power BI dashboard so a
-  non-technical reader can see the conclusion in five seconds."
-- KPI contrast: model win accuracy vs Vegas win accuracy - the market wins.
-- The ATS-by-segment bar with the 52.4% line: nothing is exploitable.
-- The cumulative P&L line: even a 'smart' model bleeds money to the vig.
+the dashboard is visible without opening Power BI.
